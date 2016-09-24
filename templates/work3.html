@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <center><h1> All Occupations </h1> 
+    <br>
+    <h2> Below is a table of all occupations with their respective percentages.
+      Following the table is a randomly (weighted) selected occupation.</h2>
+  </head>
+
+  <body>
+    <table>
+	<tr>
+	{% for item in head%}
+	<th>{{item}}</th>
+	{% endfor %}
+	</tr>
+	
+	{% for key, value in d.iteritems()%}
+	<tr>
+		<td>{{key}}</td>
+		<td>{{value}}</td>
+	</tr>
+	{% endfor%}
+	
+	<tr>
+	{% for item in tot%}
+	 <td> <b>{{item}}</b></td>
+	{% endfor %}
+	</tr>
+	
+	</table>
+	<br>
+	<br>
+	<h3>Random Occupation: </h3>{{rand}}
+
+  </body>
+  </center>
+
+</html>
