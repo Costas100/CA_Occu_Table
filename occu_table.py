@@ -6,15 +6,8 @@ from flask import Flask, render_template
 app = Flask(__name__) 
 
 
-with open('occupations.csv','rb') as f:
-    reader = csv.reader(f)
-    d = {}
-    for row in reader: 
-      d[row[0]] = row[1]
-    del d["Job Class"]
-    del d["Total"]
-    heading = ["Job Class", "Percentage"]
-    tot = ["Total", "99.8"]
+heading = ["Job Class", "Percentage"]
+            tot = ["Total", "99.8"]
 	
 
 
